@@ -4,7 +4,7 @@ import './Load.scss';
 function Load() {
     return (
         <div className='load'>
-            <p className="coming-soon">Hi, I am Fullstack Developer</p>
+            <p className="coming-soon">Hi, I am Full Stack Developer</p>
             <div className="loader-container">
                 <div className="loader"></div>
                 <div className="loader"></div>

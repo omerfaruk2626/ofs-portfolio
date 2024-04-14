@@ -2,7 +2,7 @@
 
 I'm Omer Faruk Sivri, a Full Stack Web Developer, and this repository serves as my portfolio to showcase my works and projects.
 
-## About Me
+## About Me!
 
 
 - **Location**: Eskisehir/Turkey

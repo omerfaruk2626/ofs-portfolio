@@ -1,7 +1,7 @@
 .contact {
     background-color: rgb(51, 42, 57);
-    height: calc(100vh - 90px);
-    // padding-top: 100px;
+    height: 100vh;
+    padding-top: 100px;
 }
 
 #contactTitle {
@@ -40,8 +40,8 @@
 @media screen and (max-width: 768px) {
     .contact {
         background-color: rgb(51, 42, 57);
-        height: calc(100vh - 90px);
-        padding-top: 10px;
+        height: 100vh;
+        padding-top: 70px;
     }
     .textArea {
         margin-top: 1rem;
@@ -68,7 +68,7 @@
         margin-bottom: 2px;
     }
     #sendMessageBtn {
-        // margin-top: 5px;
+        margin-top: 5px;
         font-size: 0.8rem;
         padding: 0.5rem 0.8rem;
     }

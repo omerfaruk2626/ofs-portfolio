@@ -1,4 +1,3 @@
-// App.js
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeaderNavbar from "./Components/Navbar/NavBar";
 import Main from "./Components/Main/Main";
@@ -11,10 +10,9 @@ import "./App.scss";
 function App() {
   console.log("App component rendered");
   return (
-
     <BrowserRouter>
       <HeaderNavbar />
-      <div className="AppDiv">
+      <div>
         <Routes>
           <Route path="" element={<Main />} />
           <Route path="technologies" element={<Technologies />} />

@@ -5,3 +5,13 @@
 @import "./Pages/Projects/Projects.scss";
 @import "./Components/Footer/Footer.scss";
 @import "./Pages/Contact/Contact.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}

@@ -2,45 +2,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Jacquard+24&family=Jacquarda+Bastarda+9+Charted&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jacquard+24&family=Jacquarda+Bastarda+9+Charted&family=Jersey+10&family=Jersey+20+Charted&display=swap');
 
-// Renkler ve arka plan rengi için değişkenler
+
 $text-color-red: #ff0000;
 $text-color-white: #ffffff;
 $text-color-black: #000000;
 $bg-color-orange: #f6b96a;
 
-// Navbar stillemesi
+
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 10;
 }
 
-// Logo stillemesi
+
 .logo {
   font-family: 'Jacquard 24', serif;
   font-size: 2rem;
   font-weight: bold;
 }
 
-// Logo içindeki span etiketinin stillemesi
+
 .logo span {
   color: $text-color-red;
 }
 
-// Navbar içindeki linklerin stillemesi
+
 .me-auto {
   font-family: "Jersey 10", sans-serif;
   font-size: 2rem;
 
-  // Linklere hover yapıldığında stillemesi
+
   & a:hover {
     color: $text-color-red;
     text-decoration: none;
   }
 }
 
-// Ekranın genişliği 768px'den küçük olduğunda stillemesi
+
 @media screen and (max-width: 768px) {
   .me-auto {
     font-family: "Jersey 10", sans-serif;

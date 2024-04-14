@@ -31,7 +31,7 @@ const Contact = () => {
     <div className="container-fluid contact">
       <div className="container">
         <h2 className="display-3 text-center fw-bold" id="contactTitle">Contact Me</h2>
-        <div className="row pb-3">
+        <div className="row ">
           <div className="col-md-6">
             <input
               className="form-control form-control-lg mb-3"

@@ -12,7 +12,7 @@ function App() {
   console.log("App component rendered");
   return (
 
-    <BrowserRouter basename="/">
+    <BrowserRouter>
       <HeaderNavbar />
       <div className="App">
         <Routes>

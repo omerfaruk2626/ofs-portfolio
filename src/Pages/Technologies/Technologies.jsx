@@ -5,6 +5,7 @@ import { TailSpin } from 'react-loader-spinner';
 
 
 function Technologies() {
+  console.log("Technologies component rendered");
   const [selectedOption, setSelectedOption] = useState("link-1");
 
   const handleOptionSelect = (eventKey) => {

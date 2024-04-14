@@ -9,6 +9,7 @@ import Projects from "./Pages/Projects/Projects";
 import "./App.scss";
 
 function App() {
+  console.log("App component rendered");
   return (
 
     <BrowserRouter basename="/">

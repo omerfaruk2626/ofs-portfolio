@@ -1,0 +1,75 @@
+.contact {
+    background-color: rgb(51, 42, 57);
+    height: calc(100vh - 90px);
+    // padding-top: 100px;
+}
+
+#contactTitle {
+    font-family: "Jersey 10", sans-serif;
+    color: rgb(191, 189, 189);
+    letter-spacing: 3px;
+}
+
+#sendMessageBtn {
+    margin-top: 100px;
+}
+
+.mylinks {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    text-decoration: none;
+    margin-top: 300px;
+    padding-right: 30px;
+
+    & a {
+        margin: 1rem;
+        text-decoration: none;
+        color: rgb(191, 189, 189);
+        font-size: 2.2rem;
+
+        &:hover {
+            color: rgb(241, 228, 228);
+        }
+    }
+
+    ;
+
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        background-color: rgb(51, 42, 57);
+        height: calc(100vh - 90px);
+        padding-top: 10px;
+    }
+    .textArea {
+        margin-top: 1rem;
+
+    }
+
+    #message {
+        height: 80px;
+    }
+
+    .mylinks {
+        flex-wrap: wrap;
+        position: absolute;
+        bottom: 25px;
+    }
+
+    #name,
+    #email,
+    #phoneNumber,
+    #message::placeholder {
+        font-size: 0.8rem;
+    }
+    #message{
+        margin-bottom: 2px;
+    }
+    #sendMessageBtn {
+        // margin-top: 5px;
+        font-size: 0.8rem;
+        padding: 0.5rem 0.8rem;
+    }
+}

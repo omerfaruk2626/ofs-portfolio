@@ -1,4 +1,4 @@
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,4 +6,11 @@ footer{
     bottom: 0;
     width: 100%;
     background-color: #282c34;
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: #ececec;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }

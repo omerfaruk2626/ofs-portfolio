@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&family=Jacquarda+Bastarda+9+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jacquard+24&family=Jacquarda+Bastarda+9+Charted&family=Jersey+10&family=Jersey+20+Charted&display=swap');
+
+.ofsTitle{
+    font-family: 'Jacquard 24', serif;
+}
+
+
+.banner {
+  background: url(../../../public/bg2.png) no-repeat center center;
+  background-size: cover;
+  padding-top: 15%;
+  color: rgb(0, 0, 0);
+  height: calc(100vh - 90px);
+  
+}
+.bannertext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Caveat', cursive;
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 300px;
+  width: 500px;
+  & h4 {
+    font-size: 4rem;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .banner {
+    height: calc(100vh - 80px);
+  }
+  
+  .bannertext {
+    display: block;
+  flex-direction: column;
+  align-items: center;
+    top: 100px;
+    left: 0;
+    position: absolute;
+    & h4 {
+      font-size: 2rem;
+    }
+
+  }
+  
+}

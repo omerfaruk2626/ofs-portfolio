@@ -40,6 +40,7 @@ const Contact = () => {
               placeholder="Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
             <input
               className="form-control form-control-lg mb-3"
@@ -48,6 +49,7 @@ const Contact = () => {
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
             <input
               className="form-control form-control-lg"
@@ -56,6 +58,7 @@ const Contact = () => {
               placeholder="Phone Number"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
+              required
             />
           </div>
           <div className="col-md-6 textArea">
@@ -66,6 +69,7 @@ const Contact = () => {
               placeholder="Your Message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              required
             ></textarea>
           </div>
         </div>

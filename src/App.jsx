@@ -14,7 +14,7 @@ function App() {
 
     <BrowserRouter>
       <HeaderNavbar />
-      <div className="App">
+      <div className="AppDiv">
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/technologies" element={<Technologies />} />

@@ -10,7 +10,8 @@ import "./App.scss";
 
 function App() {
   return (
-    <BrowserRouter>
+
+    <BrowserRouter basename="www.omerfaruksivri.com.tr">
       <HeaderNavbar />
       <div className="App">
         <Routes>

@@ -84,16 +84,16 @@ const Contact = () => {
       </div>
       <div className="container mylinks">
         <div className="text-center">
-          <a target="_blank" href="https://www.linkedin.com/in/o-faruk-sivri/">
+          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/o-faruk-sivri/">
             <FaLinkedin />
           </a>
-          <a target="_blank" href="https://github.com/omerfaruk2626">
+          <a target="_blank" rel="noreferrer" href="https://github.com/omerfaruk2626">
             <FaGithub />
           </a>
-          <a target="_blank" href="https://medium.com/@omerfaruksivri26">
+          <a target="_blank" rel="noreferrer" href="https://medium.com/@omerfaruksivri26">
             <FaMedium />
           </a>
-          <a target="_blank" href="https://stackoverflow.com/users/23258999/omer26">
+          <a target="_blank" rel="noreferrer" href="https://stackoverflow.com/users/23258999/omer26">
             <FaStackOverflow />
           </a>
         </div>

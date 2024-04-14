@@ -7,11 +7,16 @@
 
 
 .banner {
-  background: url(../../../public/bg2.png) no-repeat center center;
+  background: url(../../../public/bg2.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+  background-size: cover;
+
   padding-top: 15%;
   color: rgb(0, 0, 0);
-  height: calc(100vh - 90px);
+  height: 100vh;
   
 }
 .bannertext {
@@ -22,7 +27,7 @@
   color: white;
   position: absolute;
   left: 0;
-  bottom: 300px;
+  bottom: 200px;
   width: 500px;
   & h4 {
     font-size: 4rem;
@@ -32,7 +37,7 @@
 
 @media screen and (max-width: 768px) {
   .banner {
-    height: calc(100vh - 80px);
+    height: 100vh;
   }
   
   .bannertext {

@@ -10,7 +10,7 @@ I'm Omer Faruk Sivri, a Full Stack Web Developer, and this repository serves as 
 - **Linkedin**: [\[Linkedin Profile\]](https://www.linkedin.com/in/o-faruk-sivri/)
 - **Personal Website**: www.omerfaruksivri.com.tr
 
-## Skills
+## My Skills
 
 - **Frontend**: HTML, CSS, JavaScript, ReactJS, Sass, Bootstrap
 - **Backend**: Node.js, Express.js

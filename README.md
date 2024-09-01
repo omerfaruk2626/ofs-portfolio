@@ -15,4 +15,4 @@ I'm Omer Faruk Sivri, a Full Stack Web Developer, and this repository serves as 
 - **Frontend**: HTML, CSS, JavaScript, ReactJS, Sass, Bootstrap
 - **Backend**: Node.js, Express.js
 - **Databases**: MySQL
-- **Other Technologies**: Git, Docker, RESTful APIs, GraphQL
+- **Other Technologies**: Git, Docker, RESTful APIs, GraphQL.

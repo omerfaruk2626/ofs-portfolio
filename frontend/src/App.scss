@@ -1,0 +1,21 @@
+@import "./Components/Load/Load.scss";
+@import "./Components/Navbar/Navbar.scss";
+@import "./Components/Main/Main.scss";
+@import "./Pages/Technologies/Technologies.scss";
+@import "./Pages/Projects/Projects.scss";
+@import "./Components/Footer/Footer.scss";
+@import "./Pages/Contact/Contact.scss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}

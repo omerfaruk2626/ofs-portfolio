@@ -10,7 +10,7 @@ const Contact = () => {
 
   const handleSendMessage = async () => {
     try {
-      const response = await fetch('https://ofs-portfolio-ned42994k-omers-projects-72f630c9.vercel.app/', {
+      const response = await fetch('/api/send-email', { // URL'i güncelledim
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -58,14 +58,12 @@ const Contact = () => {
       });
     }
   };
-  
-
 
   return (
     <div className="container-fluid contact">
       <div className="container">
         <h2 className="display-3 text-center fw-bold" id="contactTitle">Contact Me</h2>
-        <div className="row ">
+        <div className="row">
           <div className="col-md-6">
             <input
               className="form-control form-control-lg mb-3"
@@ -78,7 +76,7 @@ const Contact = () => {
             />
             <input
               className="form-control form-control-lg mb-3"
-              type="text"
+              type="email"
               id="email"
               placeholder="Email"
               value={email}
@@ -87,7 +85,7 @@ const Contact = () => {
             />
             <input
               className="form-control form-control-lg"
-              type="text"
+              type="tel"
               id="phoneNumber"
               placeholder="Phone Number"
               value={phoneNumber}
@@ -156,6 +154,7 @@ const Contact = () => {
                   className="close"
                   data-dismiss="modal"
                   aria-label="Close"
+                  
                 >
                   <span aria-hidden="true">&times;</span>
                 </button>

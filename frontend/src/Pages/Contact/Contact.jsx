@@ -10,7 +10,7 @@ const Contact = () => {
 
   const handleSendMessage = async () => {
     try {
-      const response = await fetch('http://localhost:3001/send-email', {
+      const response = await fetch('https://ofs-portfolio-ned42994k-omers-projects-72f630c9.vercel.app/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

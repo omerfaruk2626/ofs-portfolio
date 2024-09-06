@@ -8,7 +8,6 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
   port: process.env.SMTP_PORT,
@@ -18,7 +17,6 @@ const transporter = nodemailer.createTransport({
     pass: process.env.SMTP_PASS
   }
 });
-
 
 app.post('/send-email', (req, res) => {
   const { name, email, phoneNumber, message } = req.body;
@@ -37,7 +35,6 @@ app.post('/send-email', (req, res) => {
     `,
   };
 
-
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return res.status(500).json({ error: error.toString() });
@@ -46,7 +43,9 @@ app.post('/send-email', (req, res) => {
   });
 });
 
+// Port dinleme satırını kaldırın
+// app.listen(3001, () => {
+//   console.log('Sunucu 3001 portunda çalışıyor');
+// });
 
-app.listen(3001, () => {
-  console.log('Sunucu 3001 portunda çalışıyor');
-});
+module.exports = app; // Vercel bu satırı gerektirir

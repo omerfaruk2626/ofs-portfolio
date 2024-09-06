@@ -1,15 +1,49 @@
-<html>
+const express = require('express');
+const nodemailer = require('nodemailer');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+require('dotenv').config();
 
-<head>
+const app = express();
+app.use(cors());
+app.use(bodyParser.json());
 
-<title> İlk HTML Sayfamız </title>
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: parseInt(process.env.SMTP_PORT, 10), // Port numarasını integer olarak ayarlayın
+  secure: process.env.SMTP_PORT === '465', // 465 portu için secure true olmalı
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS
+  }
+});
 
-</head>
+console.log(transporter); // Burada transporter objesini kontrol edin
 
-<body>
+app.post('/api/send-email', (req, res) => {
+  const { name, email, phoneNumber, message } = req.body;
 
-<p size = "5" face = "Tahoma" color = "gray"> İlk HTML Sayfamız </p>
+  const mailOptions = {
+    from: process.env.SMTP_USER,
+    to: process.env.SMTP_USER,
+    subject: `Yeni İletişim Formu Mesajı: ${name}`,
+    text: `
+      İsim: ${name}
+      Email: ${email}
+      Telefon Numarası: ${phoneNumber}
+      
+      Mesaj:
+      ${message}
+    `,
+  };
 
-</body>
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return res.status(500).json({ error: error.toString() });
+    }
+    res.status(200).json({ message: 'Mesaj başarıyla gönderildi' });
+  });
+});
 
-</html>
+// Export uygulamanızı
+module.exports = app;

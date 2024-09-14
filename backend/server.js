@@ -27,29 +27,13 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-// Test e-postası gönder
-const testMailOptions = {
-  from: 'ofs@omerfaruksivri.com.tr',
-  to: 'test@example.com', // Kendi e-posta adresinizi buraya ekleyin
-  subject: 'Test E-posta',
-  text: 'Bu bir test e-postasıdır.',
-};
-
-transporter.sendMail(testMailOptions, (error, info) => {
-  if (error) {
-    console.error('Test mail sending error:', error);
-  } else {
-    console.log('Test mail sent:', info.response);
-  }
-});
-
 // E-posta gönderim endpoint'i
 app.post('/api/send-email', (req, res) => {
   const { name, email, phoneNumber, message } = req.body;
 
   const mailOptions = {
     from: 'ofs@omerfaruksivri.com.tr',
-    to: 'omerfaruksivri26@gmail.com', // E-posta gönderen ile aynı
+    to: 'ofs@omerfaruksivri.com.tr', // E-posta gönderen ile aynı
     subject: `Yeni İletişim Formu Mesajı: ${name}`,
     text: `
       İsim: ${name}

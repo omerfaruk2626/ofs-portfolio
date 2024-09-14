@@ -5,7 +5,14 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+
+// CORS yapılandırmasını doğru bir şekilde ayarlayın
+app.use(cors({
+  origin: 'http://omerfaruksivri.com.tr', // İstemci kaynağınızı belirtin
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(bodyParser.json());
 
 const transporter = nodemailer.createTransport({

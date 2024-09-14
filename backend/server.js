@@ -8,10 +8,11 @@ const app = express();
 
 // CORS yapılandırmasını doğru bir şekilde ayarlayın
 app.use(cors({
-  origin: 'http://omerfaruksivri.com.tr', // İstemci kaynağınızı belirtin
+  origin: '*', // Tüm kaynaklara izin verir
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
 
 app.use(bodyParser.json());
 

@@ -6,34 +6,50 @@ require('dotenv').config();
 
 const app = express();
 
-// CORS yapılandırmasını doğru bir şekilde ayarlayın
+// CORS yapılandırması
 app.use(cors({
   origin: '*', // Tüm kaynaklara izin verir
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-
+// Body parser middleware
 app.use(bodyParser.json());
 
+// Nodemailer yapılandırması
 const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: parseInt(process.env.SMTP_PORT, 10),
-  secure: process.env.SMTP_PORT === '465',
+  host: 'gandalf.wlsrv.com',
+  port: 465,
+  secure: true, // 465 portu SSL/TLS gerektirir
   auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS
+    user: 'ofs@omerfaruksivri.com.tr',
+    pass: process.env.SMTP_PASS // .env dosyasından şifreyi al
   }
 });
 
-console.log(transporter); // Burada transporter objesini kontrol edin
+// Test e-postası gönder
+const testMailOptions = {
+  from: 'ofs@omerfaruksivri.com.tr',
+  to: 'test@example.com', // Kendi e-posta adresinizi buraya ekleyin
+  subject: 'Test E-posta',
+  text: 'Bu bir test e-postasıdır.',
+};
 
+transporter.sendMail(testMailOptions, (error, info) => {
+  if (error) {
+    console.error('Test mail sending error:', error);
+  } else {
+    console.log('Test mail sent:', info.response);
+  }
+});
+
+// E-posta gönderim endpoint'i
 app.post('/api/send-email', (req, res) => {
   const { name, email, phoneNumber, message } = req.body;
 
   const mailOptions = {
-    from: process.env.SMTP_USER,
-    to: process.env.SMTP_USER,
+    from: 'ofs@omerfaruksivri.com.tr',
+    to: 'omerfaruksivri26@gmail.com', // E-posta gönderen ile aynı
     subject: `Yeni İletişim Formu Mesajı: ${name}`,
     text: `
       İsim: ${name}
@@ -59,5 +75,5 @@ app.listen(port, () => {
   console.log(`Sunucu ${port} portunda dinliyor...`);
 });
 
-// Export uygulamanızı
+// Export uygulamanız
 module.exports = app;

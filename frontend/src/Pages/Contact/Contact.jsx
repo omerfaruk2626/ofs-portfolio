@@ -10,7 +10,7 @@ const Contact = () => {
 
   const handleSendMessage = async () => {
     try {
-      const response = await fetch('/api/send-email', { // URL'i güncelledim
+      const response = await fetch(`${process.env.REACT_APP_URL}/api/send-email-`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ const Contact = () => {
           message,
         }),
       });
-  
+
       if (response.ok) {
         Swal.fire({
           position: 'top-end',
@@ -31,7 +31,7 @@ const Contact = () => {
           showConfirmButton: false,
           timer: 1500,
         });
-  
+
         // Formu sıfırla
         setName('');
         setEmail('');
@@ -84,7 +84,7 @@ const Contact = () => {
               required
             />
             <input
-              className="form-control form-control-lg"
+              className="form-control form-control-lg mb-3"
               type="tel"
               id="phoneNumber"
               placeholder="Phone Number"
@@ -93,7 +93,7 @@ const Contact = () => {
               required
             />
           </div>
-          <div className="col-md-6 textArea">
+          <div className="col-md-6">
             <textarea
               className="form-control form-control-lg"
               rows="5"
@@ -111,10 +111,8 @@ const Contact = () => {
             className="btn btn-light btn-lg"
             id="sendMessageBtn"
             onClick={handleSendMessage}
-            data-toggle="modal"
-            data-target="#messageModal"
           >
-            PUSH
+            SEND
           </button>
         </div>
       </div>
@@ -132,47 +130,6 @@ const Contact = () => {
           <a target="_blank" rel="noreferrer" href="https://stackoverflow.com/users/23258999/omer26">
             <FaStackOverflow />
           </a>
-        </div>
-      </div>
-      <div className="container">
-        <div
-          className="modal fade"
-          id="messageModal"
-          tabIndex="-1"
-          role="dialog"
-          aria-labelledby="messageModalLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog modal-dialog-centered" role="document">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title" id="messageModalLabel">
-                  Message Sent
-                </h5>
-                <button
-                  type="button"
-                  className="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                  
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div className="modal-body">
-                <p>Your message has been sent. Thank you!</p>
-              </div>
-              <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

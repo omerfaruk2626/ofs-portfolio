@@ -10,7 +10,7 @@ const Contact = () => {
 
   const handleSendMessage = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_URL}/api/send-email-`, {
+      const response = await fetch(`http://ofs-portfolio-production.up.railway.app/api/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ const Contact = () => {
           message,
         }),
       });
-
+  
       if (response.ok) {
         Swal.fire({
           position: 'top-end',
@@ -31,7 +31,7 @@ const Contact = () => {
           showConfirmButton: false,
           timer: 1500,
         });
-
+  
         // Formu sıfırla
         setName('');
         setEmail('');
@@ -58,6 +58,7 @@ const Contact = () => {
       });
     }
   };
+  
 
   return (
     <div className="container-fluid contact">

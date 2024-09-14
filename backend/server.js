@@ -10,8 +10,8 @@ app.use(bodyParser.json());
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
-  port: parseInt(process.env.SMTP_PORT, 10), // Port numarasını integer olarak ayarlayın
-  secure: process.env.SMTP_PORT === '465', // 465 portu için secure true olmalı
+  port: parseInt(process.env.SMTP_PORT, 10),
+  secure: process.env.SMTP_PORT === '465',
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS
@@ -43,6 +43,12 @@ app.post('/api/send-email', (req, res) => {
     }
     res.status(200).json({ message: 'Mesaj başarıyla gönderildi' });
   });
+});
+
+// Sunucuyu başlat
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+  console.log(`Sunucu ${port} portunda dinliyor...`);
 });
 
 // Export uygulamanızı

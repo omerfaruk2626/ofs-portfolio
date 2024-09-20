@@ -10,7 +10,7 @@ const Contact = () => {
 
   const handleSendMessage = async () => {
     try {
-      const response = await fetch(`http://ofs-portfolio-production.up.railway.app/api/send-email`, {
+      const response = await fetch(`https://ofs-portfolio-1.onrender.com/api/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ const Contact = () => {
           message,
         }),
       });
-  
+
       if (response.ok) {
         Swal.fire({
           position: 'top-end',
@@ -31,14 +31,14 @@ const Contact = () => {
           showConfirmButton: false,
           timer: 1500,
         });
-  
-        // Formu sıfırla
+
+        // Reset the form
         setName('');
         setEmail('');
         setPhoneNumber('');
         setMessage('');
       } else {
-        // Hata işleme
+        // Handle error
         const errorData = await response.json();
         Swal.fire({
           position: 'top-end',
@@ -58,7 +58,6 @@ const Contact = () => {
       });
     }
   };
-  
 
   return (
     <div className="container-fluid contact">

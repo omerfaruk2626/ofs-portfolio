@@ -33,7 +33,7 @@ app.post('/api/send-email', (req, res) => {
 
   const mailOptions = {
     from: 'ofs@omerfaruksivri.com.tr',
-    to: 'ofs@omerfaruksivri.com.tr', // E-posta gönderen ile aynı
+    to: 'ofs@omerfaruksivri.com.tr',
     subject: `Yeni İletişim Formu Mesajı: ${name}`,
     text: `
       İsim: ${name}

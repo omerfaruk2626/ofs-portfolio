@@ -19,7 +19,7 @@ function Technologies() {
       id="technologies-tabs"
       activeKey={selectedOption}
       onSelect={handleOptionSelect}
-      className="text-danger"
+      className="text-danger container-fluid tab-container"
     >
       <Tab className='tab tab-title-react' eventKey="link-1" title="NEXT.JS">
         {selectedOption === "link-1" && (
@@ -112,6 +112,7 @@ function Technologies() {
           </div>
         )}
       </Tab>
+      
     </Tabs>
   );
 }

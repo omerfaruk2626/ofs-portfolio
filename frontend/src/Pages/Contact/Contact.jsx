@@ -117,7 +117,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="container mylinks">
-        <div className="text-center">
+        <div className="text-center flex gap-1">
           <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/o-faruk-sivri/">
             <FaLinkedin />
           </a>

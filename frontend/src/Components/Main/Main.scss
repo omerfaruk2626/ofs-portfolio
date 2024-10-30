@@ -1,58 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&family=Jacquarda+Bastarda+9+Charted&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jacquard+24&family=Jacquarda+Bastarda+9+Charted&family=Jersey+10&family=Jersey+20+Charted&display=swap');
-
-.ofsTitle{
-    font-family: 'Jacquard 24', serif;
-}
-
-
 .bannerdiv {
-  background: url(../../../public/bg2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  // padding-top: 15%;
-  color: rgb(0, 0, 0);
+  background: linear-gradient(135deg, rgba(36, 11, 54, 1) 0%, rgba(58, 18, 85, 1) 50%, rgba(97, 37, 117, 1) 100%);
   height: 100vh;
-  width: 100%;
-  
-}
-.bannertext {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  font-family: 'Caveat', cursive;
+  justify-content: center;
+  position: relative;
   color: white;
-  position: absolute;
-  left: 0;
-  bottom: 200px;
-  width: 500px;
+  text-align: center;
+}
+
+.bannertext {
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+
+
   & h4 {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    z-index: 1;
+    font-family: 'Workbench', sans-serif;
+  }
+
+  & p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    z-index: 1;
+  }
+
+  .flex {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  /* El yazısı animasyonu */
+  .handwriting {
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    position: absolute;
+    top: -100px;
+    /* Yazıyı yukarıda tut */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    border-right: 2px solid white;
+    /* İmleç için kenar */
+    color: white;
+    z-index: 1;
+  }
+
+  /* İmleç */
+  .caret {
+    animation: blink-caret 0.75s step-end infinite;
+  }
+/* Main.css */
+.btn-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slide-in-left 0.5s forwards;
+}
+
+.btn-right {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slide-in-right 0.5s forwards;
+}
+
+@keyframes slide-in-left {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
-
-@media screen and (max-width: 768px) {
-  .bannerdiv {
-    height: 100vh;
-    width: 100vw;
+@keyframes slide-in-right {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  .bannertext {
-    display: block;
-  flex-direction: column;
-  align-items: center;
-    top: 100px;
-    left: 0;
-    position: absolute;
-  width: 280px;
+}
+  @keyframes blink-caret {
 
-    & h4 {
-      font-size: 2rem;
+    0%,
+    100% {
+      border-color: transparent;
     }
 
+    50% {
+      border-color: white;
+    }
   }
-  
+}
+
+@media screen and (max-width: 768px) {
+  .bannertext {
+    max-width: 90%;
+
+    & h4 {
+      font-size: 2.5rem;
+    }
+
+    & p {
+      font-size: 1.2rem;
+    }
+
+    & a {
+      font-size: 1rem;
+    }
+  }
+
+  .handwriting {
+    font-size: 3rem;
+  }
 }

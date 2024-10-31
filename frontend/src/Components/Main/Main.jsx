@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function Main() {
   const fullText = "www.omerfaruksivri.com.tr";
@@ -36,15 +37,18 @@ function Main() {
           Explore my projects and discover the endless possibilities
         </p>
         <div className="flex gap-2 items-center justify-center">
-          <a
-            href="/Resume_ENG.pdf"
+          <NavLink
+            to="/Resume_ENG.pdf"
             className="btn btn-outline-light mt-3 btn-left"
           >
             Check My Resume
-          </a>
-          <a href="/contact" className="btn btn-outline-light mt-3 btn-right">
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className="btn btn-outline-light mt-3 btn-right"
+          >
             Contact Me
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>

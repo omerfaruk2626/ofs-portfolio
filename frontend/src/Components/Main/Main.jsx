@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import ResumeSection from "../ResumeSection/ResumeSection";
 
 function Main() {
   const fullText = "www.omerfaruksivri.com.tr";
@@ -37,18 +38,17 @@ function Main() {
           Explore my projects and discover the endless possibilities
         </p>
         <div className="flex gap-2 items-center justify-center">
-          <NavLink
-            to="/Resume_ENG.pdf"
-            className="btn btn-outline-light mt-3 btn-left"
-          >
-            Check My Resume
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className="btn btn-outline-light mt-3 btn-right"
-          >
-            Contact Me
-          </NavLink>
+          <div className="animate-slide-in-left">
+            <ResumeSection />
+          </div>
+          <div className="animate-slide-in-right">
+            <NavLink
+              to="/contact"
+              className="btn btn-outline-light mt-3 btn-right "
+            >
+              Contact Me
+            </NavLink>
+          </div>
         </div>
       </div>
     </div>

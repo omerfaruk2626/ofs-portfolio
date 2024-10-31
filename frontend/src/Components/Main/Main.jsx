@@ -15,10 +15,7 @@ function Main() {
         index++;
       } else {
         clearInterval(typingInterval);
-        const caretTimer = setTimeout(() => {
-          setShowCaret(false);
-        }, 10);
-        return () => clearTimeout(caretTimer);
+        setTimeout(() => setShowCaret(false), 500); // 500 ms bekleyip caret'i gizle
       }
     }, 200);
 
@@ -44,7 +41,7 @@ function Main() {
           <div className="animate-slide-in-right">
             <NavLink
               to="/contact"
-              className="btn btn-outline-light mt-3 btn-right "
+              className="btn btn-outline-light mt-3 btn-right"
             >
               Contact Me
             </NavLink>

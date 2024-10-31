@@ -42,7 +42,7 @@ function Main() {
           >
             Check My Resume
           </a>
-          <a href="/contact" target="_blank" referrerPolicy="no-referrer" className="btn btn-outline-light mt-3 btn-right">
+          <a href="/contact" className="btn btn-outline-light mt-3 btn-right">
             Contact Me
           </a>
         </div>

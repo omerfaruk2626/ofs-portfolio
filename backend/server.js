@@ -6,28 +6,24 @@ require('dotenv').config();
 
 const app = express();
 
-// CORS yapılandırması
 app.use(cors({
-  origin: '*', // Tüm kaynaklara izin verir
+  origin: '*',
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-// Body parser middleware
 app.use(bodyParser.json());
 
-// Nodemailer yapılandırması
 const transporter = nodemailer.createTransport({
   host: 'gandalf.wlsrv.com',
   port: 465,
-  secure: true, // 465 portu SSL/TLS gerektirir
+  secure: true,
   auth: {
     user: 'ofs@omerfaruksivri.com.tr',
-    pass: process.env.SMTP_PASS // .env dosyasından şifreyi al
+    pass: process.env.SMTP_PASS
   }
 });
 
-// E-posta gönderim endpoint'i
 app.post('/api/send-email', (req, res) => {
   const { name, email, phoneNumber, message } = req.body;
 
@@ -53,11 +49,9 @@ app.post('/api/send-email', (req, res) => {
   });
 });
 
-// Sunucuyu başlat
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
   console.log(`Sunucu ${port} portunda dinliyor...`);
 });
 
-// Export uygulamanız
 module.exports = app;

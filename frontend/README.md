@@ -1,4 +1,4 @@
-# Hello, Welcome to My Portfolio!!!
+# Hello, Welcome to My Portfolio!
 
 I'm Omer Faruk Sivri, a Full Stack Web Developer, and this repository serves as my portfolio to showcase my works and projects.
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://omerfaruksivri.com.tr/</loc>
+    <lastmod>2025-01-09T12:16:28.429Z</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://omerfaruksivri.com.tr/projects</loc>
+    <lastmod>2025-01-09T12:16:28.430Z</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://omerfaruksivri.com.tr/technologies</loc>
+    <lastmod>2025-01-09T12:16:28.430Z</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://omerfaruksivri.com.tr/about</loc>
+    <lastmod>2025-01-09T12:16:28.430Z</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://omerfaruksivri.com.tr/contact</loc>
+    <lastmod>2025-01-09T12:16:28.430Z</lastmod>
+    <priority>0.8</priority>
+  </url>
+</urlset>

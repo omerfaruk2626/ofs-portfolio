@@ -7,24 +7,29 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
+    "formik": "^2.4.6",
     "framer-motion": "^11.16.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
     "react-icons": "^5.0.1",
     "react-loader-spinner": "^6.1.6",
-    "react-router-dom": "^6.22.3",
+    "react-router-dom": "^6.28.1",
     "react-scripts": "^5.0.1",
+    "react-snap": "^1.23.0",
     "sass": "^1.74.1",
     "sweetalert2": "^11.10.7",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^1.6.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test:chrome": "npx playwright test --headed --browser=chromium",
     "test:firefox": "npx playwright test --headed --browser=firefox",
-    "test:safari": "npx playwright test --headed --browser=webkit"
+    "test:safari": "npx playwright test --headed --browser=webkit",
+    "postbuild": "react-snap"
   },
   "eslintConfig": {
     "extends": [

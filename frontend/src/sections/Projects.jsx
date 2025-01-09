@@ -45,8 +45,11 @@ const fadeInOutVariants = {
 
 const Projects = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white snap-start">
-      <h2 className="text-4xl text-center mb-10">My Projects</h2>
+    <section
+      id="projects"
+      className="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white snap-start"
+    >
+      <h2 className="text-4xl text-center m-10">My Projects</h2>
       <div className="container mx-auto flex flex-col gap-8 items-center">
         {projects.map((project, index) => (
           <motion.div
@@ -65,7 +68,7 @@ const Projects = () => {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lg font-semibold text-purple-400 hover:underline"
+              className="text-sm break-words font-semibold text-purple-400 hover:underline"
             >
               {project.link}
             </a>

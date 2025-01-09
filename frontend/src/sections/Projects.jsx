@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import banadersbul from "../assets/images/banadersbul.gif";
 import caritakipsistemi from "../assets/images/etkincari.gif";
+import codeFighters from "../assets/images/code_fighters.gif";
 
 const projects = [
   {
@@ -20,7 +21,7 @@ const projects = [
   {
     title: "Frontend Project",
     description: "Bootstrap + React.js + Pure CSS",
-    image: "/project3.jpg",
+    image: codeFighters,
     link: "https://dapper-nasturtium-644801.netlify.app/",
   },
 ];

@@ -2,12 +2,9 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Swal from "sweetalert2";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaMedium,
-  FaStackOverflow,
-} from "react-icons/fa";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+import { Box, TextField } from "@mui/material";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -27,7 +24,6 @@ const Contact = () => {
         .email("Geçerli bir e-posta girin")
         .required("E-posta zorunludur"),
       phoneNumber: Yup.string()
-        .matches(/^[0-9]+$/, "Telefon numarası sadece rakamlardan oluşmalıdır")
         .min(10, "Telefon numarası en az 10 haneli olmalıdır")
         .required("Telefon numarası zorunludur"),
       message: Yup.string()
@@ -84,114 +80,88 @@ const Contact = () => {
         className="w-full max-w-lg bg-gray-800 p-6 rounded-lg shadow-lg"
       >
         <div className="mb-4">
-          <label htmlFor="name" className="block text-gray-300 mb-2">
-            Who are you?
-          </label>
-          <input
+          <TextField
+            fullWidth
             id="name"
             name="name"
-            type="text"
+            label="Who are you?"
+            variant="outlined"
+            InputLabelProps={{ style: { color: "white" } }}
+            InputProps={{
+              style: { color: "white", backgroundColor: "#374151" },
+            }}
             {...formik.getFieldProps("name")}
-            className="w-full p-3 bg-gray-700 text-white rounded border border-gray-600 focus:ring-2 focus:ring-purple-500"
+            error={formik.touched.name && Boolean(formik.errors.name)}
+            helperText={formik.touched.name && formik.errors.name}
           />
-          {formik.touched.name && formik.errors.name ? (
-            <p className="text-red-500 text-sm mt-1">{formik.errors.name}</p>
-          ) : null}
         </div>
-
         <div className="mb-4">
-          <label htmlFor="email" className="block text-gray-300 mb-2">
-            E-mail
-          </label>
-          <input
+          <TextField
+            fullWidth
             id="email"
             name="email"
-            type="email"
+            label="E-mail"
+            variant="outlined"
+            InputLabelProps={{ style: { color: "white" } }}
+            InputProps={{
+              style: { color: "white", backgroundColor: "#374151" },
+            }}
             {...formik.getFieldProps("email")}
-            className="w-full p-3 bg-gray-700 text-white rounded border border-gray-600 focus:ring-2 focus:ring-purple-500"
+            error={formik.touched.email && Boolean(formik.errors.email)}
+            helperText={formik.touched.email && formik.errors.email}
           />
-          {formik.touched.email && formik.errors.email ? (
-            <p className="text-red-500 text-sm mt-1">{formik.errors.email}</p>
-          ) : null}
         </div>
-
-        <div className="mb-4">
+        <div className="mb-4 w-full">
           <label htmlFor="phoneNumber" className="block text-gray-300 mb-2">
             Phone Number
           </label>
-          <input
-            id="phoneNumber"
-            name="phoneNumber"
-            type="tel"
-            {...formik.getFieldProps("phoneNumber")}
-            className="w-full p-3 bg-gray-700 text-white rounded border border-gray-600 focus:ring-2 focus:ring-purple-500"
-          />
+          <Box sx={{ width: "100%", "& .react-tel-input": { width: "100%" } }}>
+            <PhoneInput
+              country={"tr"}
+              value={formik.values.phoneNumber}
+              onChange={(phone) => formik.setFieldValue("phoneNumber", phone)}
+              inputProps={{
+                name: "phoneNumber",
+                required: true,
+                autoFocus: false,
+              }}
+              containerClass="w-full"
+              inputClass="w-full ms-4 p-4 text-black rounded border border-gray-600 bg-gray-700 focus:ring-2 focus:ring-purple-500 outline-none"
+              buttonClass="bg-gray-600 text-black border-gray-500 hover:bg-gray-500"
+            />
+          </Box>
           {formik.touched.phoneNumber && formik.errors.phoneNumber ? (
             <p className="text-red-500 text-sm mt-1">
               {formik.errors.phoneNumber}
             </p>
           ) : null}
         </div>
-
         <div className="mb-4">
-          <label htmlFor="message" className="block text-gray-300 mb-2">
-            Your Message
-          </label>
-          <textarea
+          <TextField
+            fullWidth
             id="message"
             name="message"
-            rows="5"
+            label="Your message"
+            multiline
+            rows={4}
+            variant="outlined"
+            InputLabelProps={{ style: { color: "white" } }}
+            InputProps={{
+              style: { color: "white", backgroundColor: "#374151" },
+            }}
             {...formik.getFieldProps("message")}
-            className="w-full p-3 bg-gray-700 text-white rounded border border-gray-600 focus:ring-2 focus:ring-purple-500"
-          ></textarea>
-          {formik.touched.message && formik.errors.message ? (
-            <p className="text-red-500 text-sm mt-1">{formik.errors.message}</p>
-          ) : null}
+            error={formik.touched.message && Boolean(formik.errors.message)}
+            helperText={formik.touched.message && formik.errors.message}
+          />
         </div>
-
         <button
           type="submit"
           disabled={loading}
           className="w-full p-3 bg-purple-600 hover:bg-purple-700 text-white rounded font-bold transition"
         >
-          {loading ? "Pushing..." : "Push"}
+          {loading ? "Gönderiliyor..." : "Gönder"}
         </button>
       </form>
-
-      <div className="text-center mt-6 flex gap-4 text-2xl">
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.linkedin.com/in/o-faruk-sivri/"
-          className="text-blue-500 hover:text-blue-400"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://github.com/omerfaruk2626"
-          className="text-gray-300 hover:text-gray-200"
-        >
-          <FaGithub />
-        </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://medium.com/@omerfaruksivri26"
-          className="text-green-500 hover:text-green-400"
-        >
-          <FaMedium />
-        </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://stackoverflow.com/users/23258999/omer26"
-          className="text-orange-500 hover:text-orange-400"
-        >
-          <FaStackOverflow />
-        </a>
-      </div>
     </section>
   );
 };

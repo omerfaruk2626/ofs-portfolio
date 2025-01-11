@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import Swal from "sweetalert2";
 import TextField from "@mui/material/TextField";
 import PhoneInputComponent from "../Components/PhoneInput";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"; // Import Icons
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -82,7 +83,38 @@ const Contact = () => {
       id="contact"
       className="min-h-screen w-full flex flex-col justify-center items-center bg-gray-900 text-white px-6"
     >
-      <h2 className="text-4xl font-bold mb-6 text-center">Contact Me</h2>
+      <h2 className="text-5xl font-bold mb-6 text-purple-400">Get in Touch</h2>
+
+      <p className="text-lg text-gray-300 text-center max-w-2xl mb-6">
+        Feel free to reach out to me for **collaborations, job opportunities**,
+        or any web development inquiries.
+      </p>
+
+      <div className="flex justify-center space-x-6 mb-8">
+        <a
+          href="https://github.com/omerfaruk2626"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-lg text-white text-lg font-semibold shadow-md hover:bg-gray-700 transition"
+        >
+          <FaGithub className="text-2xl" /> GitHub
+        </a>
+        <a
+          href="https://linkedin.com/in/o-faruk-sivri"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 rounded-lg text-white text-lg font-semibold shadow-md hover:bg-blue-700 transition"
+        >
+          <FaLinkedin className="text-2xl" /> LinkedIn
+        </a>
+        <a
+          href="mailto:ofs@omerfaruksivri.com.tr"
+          className="flex items-center gap-2 px-4 py-2 bg-green-600 rounded-lg text-white text-lg font-semibold shadow-md hover:bg-green-700 transition"
+        >
+          <FaEnvelope className="text-2xl" /> Email Me
+        </a>
+      </div>
+
       <form
         onSubmit={formik.handleSubmit}
         className="w-full max-w-lg bg-gray-800 p-6 rounded-md shadow-lg"
@@ -123,6 +155,10 @@ const Contact = () => {
         </div>
 
         <div className="mb-4">
+          <PhoneInputComponent formik={formik} />
+        </div>
+
+        <div className="mb-4">
           <TextField
             fullWidth
             id="message"
@@ -139,10 +175,6 @@ const Contact = () => {
             error={formik.touched.message && Boolean(formik.errors.message)}
             helperText={formik.touched.message && formik.errors.message}
           />
-        </div>
-
-        <div className="mb-4">
-          <PhoneInputComponent formik={formik} />
         </div>
 
         <button

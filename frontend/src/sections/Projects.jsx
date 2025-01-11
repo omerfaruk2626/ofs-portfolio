@@ -55,7 +55,7 @@ const Projects = () => {
           <motion.div
             key={index}
             custom={index % 2 === 0 ? "left" : "right"}
-            variants={fadeInOutVariants}
+            // variants={fadeInOutVariants}
             initial="hidden"
             whileInView="visible"
             exit="exit"

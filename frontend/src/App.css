@@ -2,28 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Scrollbar for Webkit Browsers */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
 
-/* Scrollbar Track */
 ::-webkit-scrollbar-track {
     background: #1f2937;
-    /* Dark Gray */
     border-radius: 5px;
 }
 
-/* Scrollbar Handle */
 ::-webkit-scrollbar-thumb {
     background: #ffd900;
-    /* Purple */
     border-radius: 5px;
 }
 
-/* Scrollbar Handle on Hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #ffd900;
-    /* Lighter Purple */
 }

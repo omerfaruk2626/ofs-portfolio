@@ -26,22 +26,22 @@ const projects = [
   },
 ];
 
-const fadeInOutVariants = {
-  hidden: (direction) => ({
-    opacity: 0,
-    x: direction === "left" ? -100 : 100,
-  }),
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 1 },
-  },
-  exit: (direction) => ({
-    opacity: 0,
-    x: direction === "left" ? 100 : -100,
-    transition: { duration: 1 },
-  }),
-};
+// const fadeInOutVariants = {
+//   hidden: (direction) => ({
+//     opacity: 0,
+//     x: direction === "left" ? -100 : 100,
+//   }),
+//   visible: {
+//     opacity: 1,
+//     x: 0,
+//     transition: { duration: 1 },
+//   },
+//   exit: (direction) => ({
+//     opacity: 0,
+//     x: direction === "left" ? 100 : -100,
+//     transition: { duration: 1 },
+//   }),
+// };
 
 const Projects = () => {
   return (

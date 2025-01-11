@@ -7,19 +7,29 @@ import Technologies from "./sections/Technologies";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import "./App.css";
+// import Navbar from "./Components/Navbar";
 
 function App() {
   return (
     <HelmetProvider>
-      {" "}
       <Router>
         <ScrollToRoute />
         <div className="h-screen overflow-y-auto scroll-smooth">
-          <Hero />
-          <Projects />
-          <Technologies />
-          <About />
-          <Contact />
+          <section id="hero">
+            <Hero />
+          </section>
+          <section id="projects">
+            <Projects />
+          </section>
+          <section id="technologies">
+            <Technologies />
+          </section>
+          <section id="about">
+            <About />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
         </div>
       </Router>
     </HelmetProvider>

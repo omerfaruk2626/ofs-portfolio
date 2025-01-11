@@ -5,27 +5,42 @@ const About = () => {
   return (
     <section
       id="about"
-      className="h-screen flex flex-col justify-center items-center text-center bg-gray-900 text-white"
+      className="h-screen w-full  flex flex-col justify-center items-center text-center bg-gray-900 text-white"
     >
       <Helmet>
-        <title>About - Ömer Faruk Sivri</title>
+        <title>Ömer Faruk Sivri - Web Developer Portfolio</title>
+
         <meta
           name="description"
-          content="Ömer Faruk Sivri, modern web uygulamaları geliştiren bir yazılım geliştiricidir."
+          content="Ömer Faruk Sivri'nin kişisel web sitesi. İlgi alanları, projeleri ve iletişim bilgileri hakkında daha fazla bilgi edinin."
         />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Ömer Faruk Sivri",
-            jobTitle: "Web Developer",
-            url: "https://omerfaruksivri.com.tr",
-            sameAs: [
-              "https://github.com/omerfaruk2626",
-              "https://linkedin.com/in/o-faruk-sivri",
-            ],
-          })}
-        </script>
+
+        <link rel="canonical" href="https://omerfaruksivri.com.tr" />
+
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:title" content="Ömer Faruk Sivri - Web Developer" />
+        <meta
+          property="og:description"
+          content="Ömer Faruk Sivri'nin kişisel web sitesi. İlgi alanları, projeleri ve iletişim bilgileri hakkında daha fazla bilgi edinin."
+        />
+        <meta property="og:url" content="https://omerfaruksivri.com.tr" />
+        <meta
+          property="og:image"
+          content="https://omerfaruksivri.com.tr/assets/preview.jpg"
+        />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ömer Faruk Sivri - Web Developer" />
+        <meta
+          name="twitter:description"
+          content="Ömer Faruk Sivri'nin kişisel web sitesi. İlgi alanları, projeleri ve iletişim bilgileri hakkında daha fazla bilgi edinin."
+        />
+        <meta
+          name="twitter:image"
+          content="https://omerfaruksivri.com.tr/assets/preview.jpg"
+        />
       </Helmet>
 
       <h1 className="text-4xl font-bold">About Me</h1>

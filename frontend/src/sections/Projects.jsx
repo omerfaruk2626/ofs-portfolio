@@ -47,7 +47,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white snap-start"
+      className="min-h-screen w-full  flex flex-col justify-center items-center bg-gray-900 text-white snap-start"
     >
       <h2 className="text-4xl text-center m-10">My Projects</h2>
       <div className="container mx-auto flex flex-col gap-8 items-center">

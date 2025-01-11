@@ -1,0 +1,34 @@
+{
+    "title": "Teknolojiler & Yetenekler",
+    "description": "Modern, ölçeklenebilir ve kullanıcı dostu web uygulamaları geliştirme konusunda uzmanım.",
+    "technicalSkillsTitle": "Teknik Yetenekler",
+    "technicalSkills": [
+        "React",
+        "Next.js",
+        "Redux",
+        "JavaScript (ES6+)",
+        "Tailwind CSS",
+        "SCSS/SASS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Git & GitHub",
+        "CI/CD Süreçleri",
+        "Firebase",
+        "Jest & Testing Library"
+    ],
+    "softSkillsTitle": "Kişisel Yetenekler",
+    "softSkills": [
+        "Problem Çözme",
+        "Eleştirel Düşünme",
+        "Takım Çalışması",
+        "Uyumluluk",
+        "Zaman Yönetimi",
+        "Dikkat ve Detaycılık",
+        "Etkili İletişim",
+        "Agile & Scrum Yöntemleri",
+        "Öğrenmeye Açıklık",
+        "Yaratıcılık",
+        "Liderlik"
+    ]
+}

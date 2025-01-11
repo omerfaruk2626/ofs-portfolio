@@ -1,0 +1,23 @@
+{
+    "title": "My Projects & Contributions",
+    "list": [
+        {
+            "name": "BanaDersBul.com",
+            "originalName": "BanaDersBul.com",
+            "description": "React + Redux + Next.js + Tailwind CSS + Material UI",
+            "link": "https://www.banadersbul.com"
+        },
+        {
+            "name": "Cari Tracking System",
+            "originalName": "Cari Takip Sistemi",
+            "description": "Fullstack MERN Project (MongoDb + Express.js + React.js + Node.js)",
+            "link": "https://www.etkincari.com.tr"
+        },
+        {
+            "name": "Frontend Project",
+            "originalName": "Frontend Projesi",
+            "description": "Bootstrap + React.js + Pure CSS",
+            "link": "https://dapper-nasturtium-644801.netlify.app/"
+        }
+    ]
+}

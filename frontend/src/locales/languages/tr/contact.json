@@ -1,0 +1,29 @@
+{
+    "title": "İletişime Geçin",
+    "description": "İş fırsatları, iş birlikleri veya web geliştirme ile ilgili herhangi bir konuda benimle iletişime geçmekten çekinmeyin.",
+    "form": {
+        "name": "Adınız",
+        "email": "E-posta",
+        "phone": "Telefon Numarası",
+        "message": "Mesajınız",
+        "submit": "Gönder"
+    },
+    "formErrors": {
+        "nameMin": "İsim en az 2 karakter olmalıdır",
+        "nameRequired": "İsim gereklidir",
+        "emailValid": "Geçerli bir e-posta girin",
+        "emailRequired": "E-posta gereklidir",
+        "phoneRequired": "Telefon numarası gereklidir",
+        "messageMin": "Mesaj en az 5 karakter olmalıdır",
+        "messageRequired": "Mesaj gereklidir"
+    },
+    "successMessage": "Mesajınız gönderildi. Teşekkürler!",
+    "errorMessage": "Mesaj gönderilemedi. Lütfen tekrar deneyin.",
+    "networkError": "Ağ hatası",
+    "sending": "Gönderiliyor...",
+    "socials": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "email": "E-posta Gönder"
+    }
+}

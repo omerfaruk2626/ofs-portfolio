@@ -1,0 +1,29 @@
+{
+    "title": "Get in Touch",
+    "description": "Feel free to reach out to me for collaborations, job opportunities, or any web development inquiries.",
+    "form": {
+        "name": "Your Name",
+        "email": "Email",
+        "phone": "Phone Number",
+        "message": "Your Message",
+        "submit": "Send"
+    },
+    "formErrors": {
+        "nameMin": "Name must be at least 2 characters",
+        "nameRequired": "Name is required",
+        "emailValid": "Enter a valid email",
+        "emailRequired": "Email is required",
+        "phoneRequired": "Phone number is required",
+        "messageMin": "Message must be at least 5 characters",
+        "messageRequired": "Message is required"
+    },
+    "successMessage": "Your message has been sent. Thank you!",
+    "errorMessage": "Failed to send the message. Please try again.",
+    "networkError": "Network error",
+    "sending": "Sending...",
+    "socials": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "email": "Email Me"
+    }
+}

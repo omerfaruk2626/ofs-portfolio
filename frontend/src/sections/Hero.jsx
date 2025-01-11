@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../context/LanguageProvider";
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section
       id="hero"
@@ -13,7 +16,7 @@ const Hero = () => {
         transition={{ duration: 1 }}
         className="text-2xl font-bold"
       >
-        Welcome to My Portfolio
+        {t("hero.title")}
       </motion.h1>
 
       <motion.p
@@ -23,7 +26,7 @@ const Hero = () => {
         transition={{ duration: 1, delay: 0.5 }}
         className="mt-4 text-lg"
       >
-        Hi, I’m<h1>Ömer Faruk Sivri.</h1> I build modern web applications.
+        {t("hero.intro")} <h1>Ömer Faruk Sivri.</h1> {t("hero.description")}
       </motion.p>
 
       <motion.div
@@ -33,7 +36,7 @@ const Hero = () => {
         transition={{ duration: 1, delay: 1 }}
         className="mt-8"
       >
-        <p className="text-lg">Scroll down to more information</p>
+        <p className="text-lg">{t("hero.scrollDown")}</p>
         <div className="mt-4 animate-bounce">
           <span className="text-3xl">⬇️</span>
         </div>

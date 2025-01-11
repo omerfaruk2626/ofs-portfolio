@@ -1,81 +1,106 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { FiX } from "react-icons/fi";
 
 import banadersbul from "../assets/images/banadersbul.gif";
-import caritakipsistemi from "../assets/images/etkincari.gif";
-import codeFighters from "../assets/images/code_fighters.gif";
+import etkincari from "../assets/images/etkincari.gif";
+import code_fighters from "../assets/images/code_fighters.gif";
 
-const projects = [
-  {
-    title: "BanaDersBul.com",
-    description: "React + Redux + Next.js + Tailwind CSS + Material UI",
-    image: banadersbul,
-    link: "https://www.banadersbul.com",
-  },
-  {
-    title: "Cari Takip Sistemi",
-    description:
-      "Fullstack MERN Project MongoDb + Express.js + React.js + Node.js",
-    image: caritakipsistemi,
-    link: "https://www.etkincari.com.tr",
-  },
-  {
-    title: "Frontend Project",
-    description: "Bootstrap + React.js + Pure CSS",
-    image: codeFighters,
-    link: "https://dapper-nasturtium-644801.netlify.app/",
-  },
-];
-
-// const fadeInOutVariants = {
-//   hidden: (direction) => ({
-//     opacity: 0,
-//     x: direction === "left" ? -100 : 100,
-//   }),
-//   visible: {
-//     opacity: 1,
-//     x: 0,
-//     transition: { duration: 1 },
-//   },
-//   exit: (direction) => ({
-//     opacity: 0,
-//     x: direction === "left" ? 100 : -100,
-//     transition: { duration: 1 },
-//   }),
-// };
+const images = {
+  "BanaDersBul.com": banadersbul,
+  "Cari Tracking System": etkincari,
+  "Cari Takip Sistemi": etkincari,
+  "Frontend Project": code_fighters,
+  "Frontend Projesi": code_fighters,
+};
 
 const Projects = () => {
+  const { t, i18n } = useTranslation();
+  const [projects, setProjects] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null); // ✅ Modal için state
+
+  useEffect(() => {
+    const translatedProjects = t("projects.list", { returnObjects: true }).map(
+      (project) => ({
+        ...project,
+        image: images[project.name] || images[project.originalName] || null,
+      })
+    );
+    setProjects(translatedProjects);
+  }, [i18n.language, t]);
+
   return (
     <section
       id="projects"
-      className="min-h-screen w-full  flex flex-col justify-center items-center bg-gray-900 text-white snap-start"
+      className="min-h-screen w-full flex flex-col justify-center items-center bg-gray-900 text-white snap-start py-16"
     >
-      <h2 className="text-4xl text-center m-10">My Projects</h2>
-      <div className="container mx-auto flex flex-col gap-8 items-center">
+      <h2 className="text-4xl sm:text-5xl font-bold text-purple-400 text-center mb-12">
+        {t("projects.title")}
+      </h2>
+
+      <div className="container mx-auto flex flex-col gap-10 items-center">
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            custom={index % 2 === 0 ? "left" : "right"}
-            // variants={fadeInOutVariants}
-            initial="hidden"
-            whileInView="visible"
-            exit="exit"
-            viewport={{ once: false, amount: 0.2 }}
-            className="bg-gray-800 p-6 rounded-lg w-2/3 text-center"
+            initial={{ scale: 0, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="bg-gray-800 p-8 rounded-lg sm:w-3/4 w-full text-center shadow-lg relative overflow-hidden"
           >
-            <h3 className="text-2xl font-bold">{project.title}</h3>
-            <p className="mt-2">{project.description}</p>
+            <h3 className="text-2xl font-bold mb-3">{project.name}</h3>
+            <p className="text-lg text-gray-300">{project.description}</p>
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm break-words font-semibold text-purple-400 hover:underline"
+              className="text-sm break-words font-semibold text-purple-400 hover:underline mt-2 inline-block"
             >
               {project.link}
             </a>
-            <img src={project.image} alt={project.title} className="mt-4" />
+            <div className="mt-6 w-full flex justify-center">
+              {project.image ? (
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="max-w-full max-h-64 sm:max-h-80 rounded-lg shadow-md cursor-pointer hover:opacity-80 transition"
+                  onClick={() => setSelectedImage(project.image)}
+                />
+              ) : (
+                <div className="bg-gray-700 animate-pulse h-[100px] w-full flex items-center justify-center">
+                  <span className="text-white">Loading...</span>
+                </div>
+              )}
+            </div>
           </motion.div>
         ))}
       </div>
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
+          onClick={() => setSelectedImage(null)} // ✅ Dışarı tıklanınca kapat
+        >
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="relative"
+          >
+            <img
+              src={selectedImage}
+              alt="Project"
+              className="max-w-full max-h-[80vh] rounded-lg shadow-xl"
+            />
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-2 right-2 bg-gray-900 text-white text-3xl rounded-full p-2"
+            >
+              <FiX />
+            </button>
+          </motion.div>
+        </div>
+      )}
     </section>
   );
 };

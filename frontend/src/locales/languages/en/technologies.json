@@ -1,0 +1,34 @@
+{
+    "title": "Technologies & Skills",
+    "description": "I specialize in developing modern, scalable, and user-friendly web applications.",
+    "technicalSkillsTitle": "Technical Skills",
+    "technicalSkills": [
+        "React",
+        "Next.js",
+        "Redux",
+        "JavaScript (ES6+)",
+        "Tailwind CSS",
+        "SCSS/SASS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Git & GitHub",
+        "CI/CD Pipelines",
+        "Firebase",
+        "Jest & Testing Library"
+    ],
+    "softSkillsTitle": "Soft Skills",
+    "softSkills": [
+        "Problem-Solving",
+        "Critical Thinking",
+        "Collaboration & Teamwork",
+        "Adaptability",
+        "Time Management",
+        "Attention to Detail",
+        "Effective Communication",
+        "Agile & Scrum Methodologies",
+        "Self-Learning",
+        "Creativity",
+        "Leadership"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "hero": {
+        "title": "Welcome to My Portfolio",
+        "intro": "Hi, I'm",
+        "description": "I build modern web applications.",
+        "scrollDown": "Scroll down for more information"
+    },
+    "navbar": {
+        "home": "Home",
+        "projects": "Projects",
+        "technologies": "Technologies",
+        "about": "About Me",
+        "contact": "Contact",
+        "language": "Change Language"
+    }
+}

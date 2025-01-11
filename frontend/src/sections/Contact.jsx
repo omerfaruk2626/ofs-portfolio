@@ -90,28 +90,28 @@ const Contact = () => {
         or any web development inquiries.
       </p>
 
-      <div className="flex justify-center space-x-6 mb-8">
+      <div className="flex justify-center space-x-4 sm:space-x-2 mb-8 flex-wrap">
         <a
           href="https://github.com/omerfaruk2626"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-lg text-white text-lg font-semibold shadow-md hover:bg-gray-700 transition"
+          className="flex items-center gap-2 px-4 py-2 sm:px-3 sm:py-1 bg-gray-800 rounded-lg text-white text-lg sm:text-sm font-semibold shadow-md hover:bg-gray-700 transition"
         >
-          <FaGithub className="text-2xl" /> GitHub
+          <FaGithub className="text-2xl sm:text-xl" /> GitHub
         </a>
         <a
           href="https://linkedin.com/in/o-faruk-sivri"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 rounded-lg text-white text-lg font-semibold shadow-md hover:bg-blue-700 transition"
+          className="flex items-center gap-2 px-4 py-2 sm:px-3 sm:py-1 bg-blue-600 rounded-lg text-white text-lg sm:text-sm font-semibold shadow-md hover:bg-blue-700 transition"
         >
-          <FaLinkedin className="text-2xl" /> LinkedIn
+          <FaLinkedin className="text-2xl sm:text-xl" /> LinkedIn
         </a>
         <a
           href="mailto:ofs@omerfaruksivri.com.tr"
-          className="flex items-center gap-2 px-4 py-2 bg-green-600 rounded-lg text-white text-lg font-semibold shadow-md hover:bg-green-700 transition"
+          className="flex items-center gap-2 px-4 py-2 sm:px-3 sm:py-1 bg-green-600 rounded-lg text-white text-lg sm:text-sm font-semibold shadow-md hover:bg-green-700 transition"
         >
-          <FaEnvelope className="text-2xl" /> Email Me
+          <FaEnvelope className="text-2xl sm:text-xl" /> Email Me
         </a>
       </div>
 

@@ -4,20 +4,37 @@
         {
             "name": "BanaDersBul.com",
             "originalName": "BanaDersBul.com",
-            "description": "React + Redux + Next.js + Tailwind CSS + Material UI",
+            "technology": "React + Redux + Next.js + Tailwind CSS + Material UI",
+            "description": "I have been actively involved in frontend development for approximately a year in this project, which aims to make it easier for students and instructors to find private lessons. I contributed to state management using Redux, page optimizations with Next.js, and UI/UX improvements with Tailwind CSS. I enhanced the user experience by adding performance optimizations and animations. Additionally, I worked on SEO improvements and meta tag optimizations to increase the site's visibility in search engines. The project continues to expand with dynamic content management and filtering systems. Together with our team, we are constantly making improvements to make the project more functional.",
             "link": "https://www.banadersbul.com"
         },
         {
             "name": "Cari Tracking System",
             "originalName": "Cari Takip Sistemi",
-            "description": "Fullstack MERN Project (MongoDb + Express.js + React.js + Node.js)",
+            "technology": "Fullstack MERN Project (MongoDb + Express.js + React.js + Node.js)",
+            "description": "I developed a comprehensive financial tracking system to help companies monitor their financial transactions. The system includes user authentication, reporting, and detailed financial analysis. I built RESTful APIs using Express.js and used MongoDB as the database.",
             "link": "https://www.etkincari.com.tr"
         },
         {
-            "name": "Frontend Project",
-            "originalName": "Frontend Projesi",
-            "description": "Bootstrap + React.js + Pure CSS",
-            "link": "https://dapper-nasturtium-644801.netlify.app/"
+            "name": "Kadıkuyusu Village",
+            "originalName": "Kadıkuyusu Köyü",
+            "technology": "MERN Stack (MongoDB + Express.js + React.js + Node.js) + Next.js + Tailwind CSS + Material UI",
+            "description": "I developed a modern and fast website to promote Kadıkuyusu Village. I provided an SEO-friendly and performance-optimized structure with Next.js. Using Tailwind CSS and Material UI, I ensured a user-friendly and mobile-responsive design. As an initial interactive project, I integrated features such as user registration, login system, gallery, and announcement modules using the MERN stack. Over time, I aim to further develop this project and turn it into a fully functional real-world application.",
+            "link": "https://kadikuyusu.com/"
+        },
+        {
+            "name": "Ofs Construction",
+            "originalName": "Ofs İnşaat",
+            "technology": "Bootstrap + React.js + Pure CSS",
+            "description": "I developed a sample website showcasing construction projects. Using Next.js, I built a dynamic structure and designed a fast interface with Tailwind. I enhanced the user experience by adding interactive animations.",
+            "link": "https://ofs-insaat.netlify.app/"
+        },
+        {
+            "name": "Code Fighters",
+            "originalName": "Code Fighters",
+            "technology": "Bootstrap + React.js + Pure CSS",
+            "description": "I designed a platform that fosters a competitive environment for developers. Users can participate in coding challenges and rank on the leaderboard. The frontend was built with React.js, while Bootstrap ensured a responsive UI.",
+            "link": "https://code-fighters.netlify.app/"
         }
     ]
 }

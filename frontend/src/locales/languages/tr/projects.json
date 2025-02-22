@@ -4,20 +4,37 @@
         {
             "name": "BanaDersBul.com",
             "originalName": "BanaDersBul.com",
-            "description": "React + Redux + Next.js + Tailwind CSS + Material UI",
+            "technology": "React + Redux + Next.js + Tailwind CSS + Material UI",
+            "description": "Öğrencilerin ve eğitmenlerin özel ders bulmasını kolaylaştırmak amacıyla geliştirilen bu projede yaklaşık 1 yıldır aktif olarak frontend geliştirmeleri yapıyorum. Redux ile state yönetimi, Next.js ile sayfa optimizasyonları ve Tailwind CSS ile UI/UX iyileştirmeleri gibi birçok alanda katkıda bulundum. Kullanıcı deneyimini artırmak için performans optimizasyonları ve animasyonlar ekledim. Ayrıca, SEO geliştirmeleri ve meta etiket optimizasyonları üzerinde çalışarak sitenin arama motorlarında daha görünür olmasını sağladım. Proje, dinamik içerik yönetimi ve filtreleme sistemleriyle genişletilmeye devam ediyor. Ekibimizle birlikte sürekli geliştirmeler yaparak projeyi daha işlevsel hale getirmeye çalışıyoruz.",
             "link": "https://www.banadersbul.com"
         },
         {
             "name": "Cari Takip Sistemi",
             "originalName": "Cari Tracking System",
-            "description": "Fullstack MERN Projesi (MongoDb + Express.js + React.js + Node.js)",
+            "technology": "Fullstack MERN Projesi (MongoDb + Express.js + React.js + Node.js)",
+            "description": "Şirketlerin finansal hareketlerini takip edebilmeleri için kapsamlı bir cari takip sistemi geliştirdim. Kullanıcı kimlik doğrulama, raporlama ve detaylı finans analizleri içeriyor. RESTful API'leri Express.js ile oluşturup MongoDB veritabanını kullandım.",
             "link": "https://www.etkincari.com.tr"
         },
         {
-            "name": "Frontend Projesi",
-            "originalName": "Frontend Project",
-            "description": "Bootstrap + React.js + Pure CSS",
-            "link": "https://dapper-nasturtium-644801.netlify.app/"
+            "name": "Kadıkuyusu Köyü",
+            "originalName": "Kadıkuyusu Köyü",
+            "technology": "MERN Stack (MongoDB + Express.js + React.js + Node.js) + Next.js + Tailwind CSS + Material UI",
+            "description": "Kadıkuyusu Köyü'nü tanıtan modern ve hızlı bir web sitesi geliştirdim. Next.js ile SEO dostu ve performans açısından optimize edilmiş bir yapı sundum. Tailwind CSS ve Material UI ile kullanıcı dostu ve mobil uyumlu bir tasarım sağladım. MERN stack kullanarak bir başlangıç projesi olarak kullanıcı kaydı, giriş sistemi, galeri ve duyuru sistemleri gibi interaktif özellikler ekledim. Bu projeyi zamanla daha da geliştirerek gerçek bir proje haline getirmeyi hedefliyorum.",
+            "link": "https://kadikuyusu.com/"
+        },
+        {
+            "name": "Ofs İnşaat",
+            "originalName": "Ofs İnşaat",
+            "technology": "Bootstrap + React.js + Pure CSS",
+            "description": "İnşaat projelerini tanıtan örnek bir web sitesi geliştirdim. Next.js ile dinamik bir yapı oluşturdum ve Tailwind ile hızlı bir arayüz tasarladım. Kullanıcı deneyimini artırmak için interaktif animasyonlar ekledim.",
+            "link": "https://ofs-insaat.netlify.app/"
+        },
+        {
+            "name": "Code Fighters",
+            "originalName": "Code Fighters",
+            "technology": "Bootstrap + React.js + Pure CSS",
+            "description": "Yazılım geliştiricileri için bir rekabet ortamı sağlayan bir platform tasarladım. Kullanıcılar kodlama yarışmalarına katılabilir ve liderlik tablosunda yer alabilir. React.js ile frontend, Bootstrap ile responsive bir arayüz oluşturdum.",
+            "link": "https://code-fighters.netlify.app/"
         }
     ]
 }

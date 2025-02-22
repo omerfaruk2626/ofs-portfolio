@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import ResumeDropdown from "./ResumeDropdown";
 
 const About = () => {
   const { t } = useTranslation();
@@ -13,11 +14,8 @@ const About = () => {
       <Helmet>
         <title>{t("about.metaTitle")}</title>
         <meta name="description" content={t("about.metaDescription")} />
-
         <link rel="canonical" href="https://omerfaruksivri.com.tr" />
-
         <meta name="robots" content="index, follow" />
-
         <meta property="og:title" content={t("about.metaTitle")} />
         <meta property="og:description" content={t("about.metaDescription")} />
         <meta property="og:url" content="https://omerfaruksivri.com.tr" />
@@ -26,7 +24,6 @@ const About = () => {
           content="https://omerfaruksivri.com.tr/assets/preview.jpg"
         />
         <meta property="og:type" content="website" />
-
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t("about.metaTitle")} />
         <meta name="twitter:description" content={t("about.metaDescription")} />
@@ -58,14 +55,7 @@ const About = () => {
         </p>
 
         <div className="mt-6">
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-lg font-semibold shadow-md"
-          >
-            {t("about.resumeButton")}
-          </a>
+          <ResumeDropdown />
         </div>
       </div>
     </section>

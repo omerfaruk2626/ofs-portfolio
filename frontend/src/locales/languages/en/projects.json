@@ -23,13 +23,6 @@
             "link": "https://kadikuyusu.com/"
         },
         {
-            "name": "Ofs Construction",
-            "originalName": "Ofs İnşaat",
-            "technology": "Bootstrap + React.js + Pure CSS",
-            "description": "I developed a sample website showcasing construction projects. Using Next.js, I built a dynamic structure and designed a fast interface with Tailwind. I enhanced the user experience by adding interactive animations.",
-            "link": "https://ofs-insaat.netlify.app/"
-        },
-        {
             "name": "Code Fighters",
             "originalName": "Code Fighters",
             "technology": "Bootstrap + React.js + Pure CSS",

@@ -3,11 +3,10 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FiX } from "react-icons/fi";
 
-import banadersbul from "../assets/images/banadersbul.gif";
-import etkincari from "../assets/images/etkincari.gif";
-import code_fighters from "../assets/images/code_fighters.gif";
-import kadikuyusu from "../assets/images/kadikuyusu.gif";
-import ofs_insaat from "../assets/images/ofs_insaat.gif";
+import banadersbul from "../assets/images/banadersbul.png";
+import etkincari from "../assets/images/etkincari.png";
+import code_fighters from "../assets/images/code_fighters.png";
+import kadikuyusu from "../assets/images/kadikuyusu.png";
 import Swal from "sweetalert2";
 
 const images = {
@@ -16,8 +15,6 @@ const images = {
   "Cari Takip Sistemi": etkincari,
   "Kadıkuyusu Köyü": kadikuyusu,
   "Kadıkuyusu Village": kadikuyusu,
-  "Ofs İnşaat": ofs_insaat,
-  "Ofs Construction": ofs_insaat,
   "Code Fighters": code_fighters,
 };
 
@@ -45,8 +42,6 @@ const technologies = {
     "Pure CSS",
     "Material UI",
   ],
-  "Ofs İnşaat": ["Bootstrap", "React.js", "Pure CSS"],
-  "Ofs Construction": ["Bootstrap", "React.js", "Pure CSS"],
   "Code Fighters": ["Bootstrap", "React.js", "Pure CSS"],
 };
 
